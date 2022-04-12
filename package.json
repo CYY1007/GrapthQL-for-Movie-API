@@ -1,0 +1,22 @@
+{
+  "name": "graphql_movie",
+  "version": "1.0.0",
+  "description": "before big project practice graph QL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CYY1007/GrapthQL-for-Movie-API.git"
+  },
+  "author": "yongwook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CYY1007/GrapthQL-for-Movie-API/issues"
+  },
+  "homepage": "https://github.com/CYY1007/GrapthQL-for-Movie-API#readme",
+  "dependencies": {
+    "graphql-yoga": "^2.1.0"
+  }
+}
