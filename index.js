@@ -1,19 +1,14 @@
 import { createServer } from "graphql-yoga";
 import typeDefs from "./graphql/typeDefs";
-import { addMovie, deleteMovie, getById, getMovies, People } from "./db";
+import { getMovies} from "./db";
 
 const server = createServer({
     schema:{
         typeDefs : typeDefs,
         resolvers : {
             Query:{
-                movies : () => getMovies(),
-                movie: (_,{id}) =>getById(id)
+                movies : (_,{limit,rating}) => getMovies(limit,rating),
             },
-            Mutation:{
-                addMovie : (_,{name,score}) => addMovie(name, score),
-                deleteMovie : (_,{id}) => deleteMovie(id)
-            }
         }
     }
 })

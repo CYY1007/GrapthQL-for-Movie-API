@@ -24,6 +24,7 @@
     "babel-loader": "^8.2.4"
   },
   "dependencies": {
-    "graphql-yoga": "^2.0.0"
+    "graphql-yoga": "^2.0.0",
+    "node-fetch": "^2.6.1"
   }
 }
