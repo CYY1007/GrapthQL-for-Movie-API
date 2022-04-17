@@ -1,17 +1,22 @@
 const typeDefs = `
     type Movie{
         id: Int!
-        name: String!
-        score : Int!
+        title: String!
+        rating : Float!
+        summary : String!
+        medium_cover_image: String!
+    }
+    type Detail{
+        id: Int!
+        title: String!
+        rating : Float!
+        medium_cover_image: String!
+        description_full: String!
     }
     type Query {
-        movies : [Movie]!
-        movie(id: Int!) : Movie
-    }
-    type Mutation{
-        addMovie(name:String!, score:Int!) : Movie!
-        deleteMovie(id:Int!): Boolean!
-    }
-`;
+        movies(limit:Int rating:Float) : [Movie]!,
+        movie(id:Int) :Detail
+        suggestion(id:Int):[Movie]
+    }`;
 
 export default typeDefs;
